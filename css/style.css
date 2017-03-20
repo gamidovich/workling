@@ -1,0 +1,286 @@
+/* line 1, D:/projects/workling/css/style.scss */
+html, body {
+  margin: 0;
+  padding: 0; }
+
+/**** Fonts ****/
+@font-face {
+  font-family: "IntroBook";
+  src: url("../fonts/introregular/intro-book.eot");
+  src: url("../fonts/introbook/intro-book.eot?#iefix") format("embedded-opentype"), url("../fonts/introbook/intro-book.woff") format("woff"), url("../fonts/introbook/intro-book.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "IntroRegular";
+  src: url("../fonts/introregular/intro-regular.eot");
+  src: url("../fonts/introregular/intro-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/introregular/intro-regular.woff") format("woff"), url("../fonts/introregular/intro-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "IntroBlack";
+  src: url("../fonts/ltipccdd/ltipccdd.eot");
+  src: url("../fonts/ltipccdd/ltipccdd.eot?#iefix") format("embedded-opentype"), url("../fonts/ltipccdd/ltipccdd.woff") format("woff"), url("../fonts/ltipccdd/ltipccdd.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+/**** Mixins ****/
+/**** Variables ****/
+/* line 84, D:/projects/workling/css/style.scss */
+h1 {
+  font-family: "IntroRegular", Intro;
+  font-size: 2.8rem; }
+
+/* line 89, D:/projects/workling/css/style.scss */
+h2 {
+  font-family: "IntroBook", Intro;
+  font-size: 2rem; }
+
+/* line 94, D:/projects/workling/css/style.scss */
+h3 {
+  font-family: "IntroBook", Intro;
+  font-size: 2rem;
+  color: #88c064; }
+
+/* line 100, D:/projects/workling/css/style.scss */
+.title--h2 {
+  font-family: "ltipccdd", Intro;
+  text-align: center;
+  font-size: 2rem; }
+
+/* line 106, D:/projects/workling/css/style.scss */
+html {
+  font-size: 10px; }
+
+/* line 110, D:/projects/workling/css/style.scss */
+body {
+  font-family: "IntroRegular", Intro; }
+
+/**** Header ****/
+/* line 118, D:/projects/workling/css/style.scss */
+.header__inner {
+  width: 1140px;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between; }
+
+/* line 125, D:/projects/workling/css/style.scss */
+.logo {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center; }
+
+/* line 130, D:/projects/workling/css/style.scss */
+.main-nav {
+  height: 70px;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center; }
+  /* line 135, D:/projects/workling/css/style.scss */
+  .main-nav__list {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    font-size: 1.6rem; }
+  /* line 141, D:/projects/workling/css/style.scss */
+  .main-nav__item {
+    padding-left: 40px;
+    list-style-type: none; }
+  /* line 146, D:/projects/workling/css/style.scss */
+  .main-nav__item a:link,
+  .main-nav__item a:visited {
+    text-decoration: none;
+    color: #282828; }
+  /* line 152, D:/projects/workling/css/style.scss */
+  .main-nav__item a:hover,
+  .main-nav__item a:active {
+    color: #88c064; }
+  /* line 157, D:/projects/workling/css/style.scss */
+  .main-nav__item.active a {
+    color: #88c064; }
+
+/* line 162, D:/projects/workling/css/style.scss */
+.promo {
+  text-align: center;
+  background-image: url(../img/promo.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  /* line 169, D:/projects/workling/css/style.scss */
+  .promo__inner {
+    padding: 180px 0 165px;
+    width: 1140px;
+    margin: 0 auto;
+    color: #fff; }
+  /* line 179, D:/projects/workling/css/style.scss */
+  .promo__description {
+    margin: 14px 0 82px 0;
+    font-size: 1.6rem;
+    line-height: 1.5; }
+
+/* line 186, D:/projects/workling/css/style.scss */
+.btn {
+  font-size: 2.4rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #88c064;
+  padding: 8px 26px;
+  border-radius: 50px; }
+
+/* line 195, D:/projects/workling/css/style.scss */
+.solutions {
+  background-color: #f7f7f7; }
+  /* line 198, D:/projects/workling/css/style.scss */
+  .solutions__inner {
+    padding: 76px 0;
+    width: 1140px;
+    margin: 0 auto; }
+  /* line 203, D:/projects/workling/css/style.scss */
+  .solutions__list {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px; }
+  /* line 209, D:/projects/workling/css/style.scss */
+  .solutions__item {
+    padding: 0 32px;
+    font-size: 1.4rem;
+    text-align: center; }
+  /* line 215, D:/projects/workling/css/style.scss */
+  .solutions__pic {
+    height: 161px; }
+
+/* line 225, D:/projects/workling/css/style.scss */
+.advantages__inner {
+  width: 1140px;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem; }
+
+/* line 232, D:/projects/workling/css/style.scss */
+.advantages__item {
+  flex: 1; }
+
+/* line 236, D:/projects/workling/css/style.scss */
+.advantages__title {
+  padding: 0 42px;
+  text-align: left; }
+
+/* line 241, D:/projects/workling/css/style.scss */
+.advantages__text {
+  font-size: 1.6rem;
+  padding: 20px 0; }
+
+/* line 247, D:/projects/workling/css/style.scss */
+.main {
+  background-color: #f7f7f7; }
+  /* line 250, D:/projects/workling/css/style.scss */
+  .main__inner {
+    padding: 70px 0 84px 0;
+    width: 1140px;
+    margin: 0 auto; }
+  /* line 255, D:/projects/workling/css/style.scss */
+  .main__item {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin: 15px 0;
+    padding: 60px 74px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 #dddddd; }
+  /* line 264, D:/projects/workling/css/style.scss */
+  .main__pic {
+    width: 190px; }
+  /* line 268, D:/projects/workling/css/style.scss */
+  .main__pic img {
+    width: 100%;
+    height: 100%; }
+  /* line 273, D:/projects/workling/css/style.scss */
+  .main__content {
+    flex: 1;
+    padding-left: 100px; }
+  /* line 278, D:/projects/workling/css/style.scss */
+  .main__title {
+    font-family: "ltipccdd", Intro;
+    font-size: 2rem;
+    color: #88c064; }
+  /* line 284, D:/projects/workling/css/style.scss */
+  .main__description {
+    font-size: 1.6rem; }
+
+/* line 289, D:/projects/workling/css/style.scss */
+.footer {
+  background-color: #292929;
+  color: #fff; }
+  /* line 294, D:/projects/workling/css/style.scss */
+  .footer__inner {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 42px 82px; }
+  /* line 299, D:/projects/workling/css/style.scss */
+  .footer__list {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    font-size: 1.8rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  /* line 308, D:/projects/workling/css/style.scss */
+  .footer__item {
+    padding-right: 45px; }
+  /* line 312, D:/projects/workling/css/style.scss */
+  .footer__copyright {
+    padding-top: 18px;
+    font-size: 1.4rem; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,351 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/**** Fonts ****/
+
+@font-face {
+    font-family: "IntroBook";
+    src: url("../fonts/introregular/intro-book.eot");
+    src: url("../fonts/introbook/intro-book.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/introbook/intro-book.woff") format("woff"),
+    url("../fonts/introbook/intro-book.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "IntroRegular";
+    src: url("../fonts/introregular/intro-regular.eot");
+    src: url("../fonts/introregular/intro-regular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/introregular/intro-regular.woff") format("woff"),
+    url("../fonts/introregular/intro-regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "IntroBlack";
+    src: url("../fonts/ltipccdd/ltipccdd.eot");
+    src: url("../fonts/ltipccdd/ltipccdd.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ltipccdd/ltipccdd.woff") format("woff"),
+    url("../fonts/ltipccdd/ltipccdd.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/**** Mixins ****/
+
+@mixin flex { 
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box; 
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+@mixin inner {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+/**** Variables ****/
+
+$font-size-normal: 10px;
+$font-size-sm:     1.4rem;
+$font-size-base:   1.6rem;
+$font-size-lg:     1.8rem;
+$font-size-lg-x:   2.0rem;
+$font-size-lg-xx:  2.4rem;
+$font-size-larger: 2.8rem;
+$font-size-big:    3.6rem;
+
+$line-height-normal: 1; 
+$line-height-base:   1.5;
+$line-height-lg:     1.4;
+$line-height-lg-xx:  3.6; 
+
+$primary-color:      #88c064;
+$secondary-color:    #282828;
+$third-color:        #f7f7f7;
+
+$white:              #fff;
+$black:              #292929;
+
+$font-family-1: 'IntroBook', Intro;
+$font-family-2: 'IntroRegular', Intro;
+$font-family-3: 'ltipccdd', Intro;
+
+
+h1 {
+    font-family: $font-family-2;
+    font-size: $font-size-larger;
+}
+
+h2 {
+    font-family: $font-family-1;
+    font-size: $font-size-lg-x;
+}
+
+h3 {
+    font-family: $font-family-1;
+    font-size: $font-size-lg-x;
+    color: $primary-color;
+}
+
+.title--h2 {
+    font-family: $font-family-3;
+    text-align: center;
+    font-size: $font-size-lg-x;
+}
+
+html {
+    font-size: $font-size-normal;
+}
+
+body {
+    font-family: $font-family-2;
+}
+
+/**** Header ****/
+
+.header {
+    
+    &__inner {
+        @include inner;
+        @include flex; 
+        justify-content: space-between;        
+    }
+}
+
+.logo {
+    @include flex; 
+    align-items: center;
+}
+
+.main-nav {
+    height: 70px;
+    @include flex; 
+    align-items: center;
+    
+    &__list {
+        @include flex;
+        font-size: $font-size-base;
+          
+    }
+    
+    &__item {
+        padding-left: 40px;
+        list-style-type: none;
+    }
+    
+    &__item a:link,
+    &__item a:visited {
+        text-decoration: none;
+        color: $secondary-color; 
+    }
+    
+    &__item a:hover,
+    &__item a:active {
+        color: $primary-color;    
+    }
+    
+    &__item.active a {
+        color: $primary-color;
+    }
+}
+
+.promo {
+    text-align: center;
+    background-image: url(../img/promo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &__inner {
+        padding: 180px 0 165px;
+        @include inner;
+        color: $white;
+    }
+    
+    &__title {
+
+    }
+    
+    &__description {
+        margin: 14px 0 82px 0;
+        font-size: $font-size-base;
+        line-height: $line-height-base;
+    }
+}
+
+.btn {
+    font-size: $font-size-lg-xx;
+    text-decoration: none;
+    color: $white;
+    background-color: $primary-color;
+    padding: 8px 26px;
+    border-radius: 50px;
+}
+
+.solutions {
+    background-color: $third-color;
+    
+    &__inner {
+        padding: 76px 0;
+        @include inner;
+    }
+    
+    &__list {
+        @include flex; 
+        justify-content: space-between;
+        padding-top: 32px;
+    }
+    
+    &__item {
+        padding: 0 32px;    
+        font-size: $font-size-sm;
+        text-align: center;
+    } 
+    
+    &__pic {
+        height: 161px;
+    }
+    
+    &__text {}
+    
+}
+
+.advantages {
+    
+    &__inner {
+        @include inner;
+        @include flex; 
+        justify-content: space-between;
+        padding: 5rem;
+    }
+    
+    &__item{
+        flex: 1;
+    }
+    
+    &__title {
+        padding: 0 42px;
+        text-align: left;
+    }
+    
+    &__text {
+        font-size: $font-size-base;
+        padding: 20px 0;
+    }
+}
+
+.main {
+    background-color: $third-color;
+    
+    &__inner {
+        padding: 70px 0 84px 0;
+        @include inner;
+    }
+    
+    &__item {
+        @include flex; 
+   
+        margin: 15px 0;
+        padding: 60px 74px;
+        background-color: $white;
+        box-shadow: 0 0 20px 0 #dddddd;
+    }
+    
+    &__pic {
+        width: 190px;
+    }
+    
+    &__pic img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    &__content {
+        flex: 1;
+        padding-left: 100px;
+    }
+    
+    &__title {
+        font-family: $font-family-3;
+        font-size: $font-size-lg-x;
+        color: $primary-color;
+    }
+    
+    &__description {
+        font-size: $font-size-base;
+    }
+}
+
+.footer {
+     
+    background-color: $black;
+    color: $white;
+    
+    &__inner {
+        @include inner;
+           padding: 42px 82px;
+    }
+    
+    &__list {
+        @include flex; 
+        font-size: $font-size-lg;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+    &__item {
+        padding-right: 45px;
+    }
+    
+    &__copyright {
+        padding-top: 18px;
+        font-size: $font-size-sm;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
